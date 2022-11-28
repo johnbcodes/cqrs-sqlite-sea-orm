@@ -31,7 +31,7 @@ mod services;
 #[tokio::main]
 async fn main() {
     let uri = "sqlite://demo.db";
-    let pool = default_sqlite_pool(&uri).await;
+    let pool = default_sqlite_pool(uri).await;
     sqlx::migrate!().run(&pool).await.unwrap();
 
     let mut opt = ConnectOptions::new(uri.to_string());
