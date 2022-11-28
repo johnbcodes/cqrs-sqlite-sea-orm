@@ -1,0 +1,4 @@
+CREATE TABLE accounts (
+  id TEXT PRIMARY KEY NOT NULL,
+  balance REAL NOT NULL
+) STRICT;
