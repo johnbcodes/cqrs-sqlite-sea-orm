@@ -15,7 +15,7 @@ publish = false
 async-trait = "0.1"
 axum = "0.6"
 cqrs-es = "0.4.9"
-sea-orm = { version = "0.12.0-rc.4", git = "https://github.com/SeaQL/sea-orm", branch = "sqlx-v0.7", default-features = false, features = [ "sqlx-sqlite", "runtime-tokio-rustls", "macros" ] }
+sea-orm = { version = "0.12", default-features = false, features = [ "sqlx-sqlite", "runtime-tokio-rustls", "macros" ] }
 serde = { version = "1.0", features = ["derive"]}
 serde_json = "1.0"
 sqlite-es = "0.4.5"
