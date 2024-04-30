@@ -14,6 +14,7 @@ use crate::route_handler::{
 use crate::state::new_application_state;
 use axum::routing::get;
 use axum::Router;
+use tokio::net::TcpListener;
 
 #[tokio::main]
 async fn main() {
@@ -35,8 +36,6 @@ async fn main() {
         .with_state(state);
 
     // Start the Axum server.
-    axum::Server::bind(&"[::]:3030".parse().unwrap())
-        .serve(router.into_make_service())
-        .await
-        .unwrap();
+    let listener = TcpListener::bind("0.0.0.0:3030").await.unwrap();
+    axum::serve(listener, router).await.unwrap();
 }

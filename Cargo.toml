@@ -13,7 +13,7 @@ publish = false
 
 [dependencies]
 async-trait = "0.1"
-axum = "0.6"
+axum = "0.7"
 cqrs-es = "0.4"
 sea-orm = { version = "0.12", default-features = false, features = [ "sqlx-sqlite", "runtime-tokio-rustls", "macros" ] }
 serde = { version = "1.0", features = ["derive"]}
@@ -22,6 +22,4 @@ sqlite-es = "0.4"
 sqlx = { version = "0.7", features = [ "json", "runtime-tokio-rustls", "sqlite" ] }
 time = { version = "0.3", features = [ "formatting" ] }
 tokio = { version = "1", features = ["full"] }
-tower = "0.4"
-tower-http = "0.4"
 tracing = "0.1"
