@@ -1,3 +1,7 @@
+# Status
+This project has been archived due to not wanting deal with the mess of dependency version issues between `libsqlite3-sys`, `sqlx`, and `sea-orm` that happens when
+there is a vulnerability or upgrades.
+
 # cqrs-sqlite-sea-orm
 
 > A demo application using the [cqrs-es](https://github.com/serverlesstechnology/cqrs) framework
@@ -7,7 +11,7 @@
 
 ## Requirements
 - rust 1.53 or greater
-- [curl](curl/test_api.sh) (or your favorite Restful client) 
+- [curl](curl/test_api.sh) (or your favorite Restful client)
 
 ## Installation
 
@@ -20,7 +24,7 @@ Start the application
     cargo run
 
 Call the API, the easiest way to do this is the `test_api.sh` curl script found in the `curl` directory.
-Note that the command calls are configured to return a 204 status with no content, 
+Note that the command calls are configured to return a 204 status with no content,
 only the query call will return a `200 OK` response with a body.
 For feedback on state you should call a query.
 
